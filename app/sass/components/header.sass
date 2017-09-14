@@ -1,0 +1,46 @@
+@import ../variables
+
+// Code Background
+.header-img
+   height: $header-height
+   background: url('../../images/code.jpg')
+   background-attachment: fixed
+   background-repeat: no-repeat
+   background-position: center center
+   filter: blur(3px)
+
+// Black Overlay
+.overlay
+   z-index: 2
+   position: absolute
+   height: $header-height
+   width: 100%
+   background: rgba(0,0,0,.6)
+
+.img-container
+   overflow: hidden
+
+// Round Profile Picture
+.img-round
+   z-index: 3
+   background: url('../../images/profile.png')
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   width: $img-diameter
+   height: $img-diameter
+   margin-bottom: -$img-diameter / 1.5
+   position: relative
+   left: 5%
+   border-radius: 50%
+   filter: drop-shadow(2px 2px 2px rgba(0,0,0,.3))
+
+.profile-animation
+   animation: fade-in-up 1.5s
+   animation-fill-mode: forwards
+
+@keyframes fade-in-up
+   from
+      top: 0
+   to
+      top: -$img-diameter / 2

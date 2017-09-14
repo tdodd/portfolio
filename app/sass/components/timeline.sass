@@ -1,0 +1,290 @@
+@import ../variables
+
+.hidden
+   visibility: hidden
+
+.none
+   display: none
+
+// Slide-in Animations
+.animate-in-right
+   animation: slide-in-right 1s ease-in-out
+
+.animate-in-left 
+   animation: slide-in-left 1s ease-in-out
+
+@keyframes slide-in-right 
+  from 
+    opacity: 0.1
+    left: 50px  
+  to 
+    opacity: 1
+    left: 0
+
+@keyframes slide-in-left 
+   from 
+      opacity: 0.1
+      right: 50px
+   to 
+      opacity: 1
+      right: 0
+
+// First Circle
+.timeline-head 
+   width: 50px
+   height: 50px
+   background: white
+   border-radius: 50%
+   margin: 30px auto 0 auto
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15)
+
+// Timeline
+.timeline 
+   padding: 0 0 20px 0
+   margin: 0
+   display: flex
+   flex-direction: column
+   align-items: center
+
+// First List Element
+.timeline-item:first-child 
+   margin-top: -5px
+
+// Last List Element
+.timeline-item:last-child 
+   padding-bottom: 0
+
+// List Element
+.timeline-item 
+   width: 315px
+   list-style-type: none
+   padding-top: 50px
+   padding-bottom: 50px
+
+// Timeline Circle
+.timeline-indicator 
+   position: relative
+   top: 50px
+   width: 50px
+   height: 50px
+   background: white
+   border-radius: 50%
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15)
+
+// Content Container
+.timeline-content 
+   position: relative
+   top: -55px
+   background: $primary-color
+   color: $primary-text-color
+   padding: 0 20px 15px 20px
+   border-radius: 3px
+
+// Date
+.timeline-date 
+   font-size: 1.6em
+   position: relative
+   top: 10px
+
+// Triangle
+.timeline-triangle
+   width: 0
+   height: 0
+   border-top: 15px solid transparent
+   border-bottom: 15px solid transparent
+   position: relative
+   top: 35px
+
+// Header
+.timeline-header 
+   border-left: 2px solid #FFF
+   padding-left: 10px
+   font-size: 1.6em
+   margin-bottom: 10px
+
+.timeline-text
+
+// Timeline 'more' button
+.timeline-btn:focus 
+   outline: none
+
+.timeline-btn:hover 
+   cursor: pointer
+   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.45)
+
+.timeline-btn 
+   background: $secondary-color
+   color: $secondary-text-color
+   border: none
+   border-radius: 5px
+   text-transform: uppercase
+   padding: 8px 12px
+   margin-top: 15px
+   font-size: 1em
+
+// Pull Left
+.timeline-item-left 
+   margin-right: 300px
+   border-right: 12px solid white
+   padding-right: 25px
+
+.timeline-indicator-left 
+   right: -285px
+
+.timeline-content-left 
+   margin-right: 50px
+   filter: drop-shadow(-8px 8px 8px rgba(0, 0, 0, 0.4))
+
+.timeline-date-left 
+   right: -400px
+
+.timeline-triangle-left 
+   border-left: 15px solid $primary-color
+   right: -208px
+
+// Pull Right
+.timeline-item-right 
+   margin-left: 305px
+   border-left: 12px solid white
+   padding-left: 25px
+
+.timeline-indicator-right 
+   left: -56px
+
+.timeline-content-right 
+   margin-left: 50px
+   filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.4))
+
+.timeline-date-right 
+   left: -245px
+
+.timeline-triangle-right 
+   border-right: 15px solid $primary-color
+   right: 35px
+
+/*************************
+ * Modal Styles
+ *************************/
+.modal 
+  z-index: 10
+  width: 500px
+  position: fixed
+  top: 25%
+  left: 0
+  right: 0
+  margin: 5% auto  
+  border-radius: 3px
+  background: pink
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.6)
+
+.header-btn 
+  position: absolute
+  right: 10px
+  font-size: 1.5em
+
+.close-btn:hover 
+  cursor: pointer
+
+.modal-header 
+  text-align: center
+  font-size: 2em
+  padding-top: 12px
+
+.modal-body 
+  padding: 20px
+
+.modal-footer 
+  background: white
+  text-align: center
+  border-bottom-right-radius: 3px
+  border-bottom-left-radius: 3px
+
+.footer-btn 
+  margin: 25px 0
+  border: none
+  font-size: 1.2em
+  padding: 10px 25px
+  border-radius: 2px
+  text-transform: uppercase
+  background: teal
+  color: #FFF
+
+/* Modal Animations */
+.fade-in-up 
+  animation: fade-in-up .4s ease-in-out
+  animation-fill-mode: forwards
+
+@keyframes fade-in-up 
+  from
+    top: 25%
+  to 
+    top: 20%
+  
+
+/* Small Screens */
+@media screen and (max-width: 768px) 
+
+  /* Remove Animations */
+  .animate-in-left, .animate-in-right 
+    animation: none
+  
+  .timeline-head 
+    margin: 25px 0 0 50px
+  
+  .timeline 
+    align-items: left
+  
+  .timeline-item 
+    width: auto
+    margin-left: 68px
+    margin-right: 15px
+    padding-bottom: 0
+  
+  .timeline-date 
+    display: none
+  
+  .timeline-content 
+    top: -25px
+    filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.4))
+  
+  /* Pull Left */
+  .timeline-item-left 
+    border-right: none
+    border-left: 12px solid white
+    padding-left: 25px
+    padding-right: 0
+  
+  .timeline-indicator-left 
+    right: 0
+    left: -56px  
+  
+  .timeline-triangle-left 
+    border-left: none
+    border-right: 15px solid #3F51B5
+    right: 35px
+  
+  .timeline-content-left 
+    margin-right: 0
+    margin-left: 50px\
+  
+  /* Modal */
+  .modal 
+    width: auto
+    margin: 0 15px
+
+/* Extra Small Screens */
+@media screen and (max-width: 420px) 
+
+  .timeline-head, .timeline-indicator, .timeline-triangle 
+    display: none
+  
+  .timeline-item 
+    border: none
+    margin: 0
+    padding: 0 8px
+  
+  .timeline-content 
+    position: static
+    width: 100%
+    margin: 15px 0
+    padding: 12px

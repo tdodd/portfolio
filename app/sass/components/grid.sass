@@ -1,0 +1,59 @@
+@import ../variables
+
+/* CSS Grid */
+
+// Left Side
+.alpha-light
+   background: rgba(0,0,0,.2)
+
+// Right Side
+.alpha-dark
+   background: $primary-color
+   color: #FFF
+
+// Grid Elements
+.alpha
+   opacity: 0
+   height: 25px
+   border-radius: 8px
+   margin: 4px 0
+   text-align: center
+   text-transform: uppercase
+
+.grid-left,
+.grid-right
+   position: relative
+
+// Slide Animations
+.slide-in-left
+   animation: slide-in-left 2s ease-in-out
+   animation-fill-mode: forwards
+
+.slide-in-right
+   animation: slide-in-right 2s ease-in-out
+   animation-fill-mode: forwards
+
+.grid-left
+   left: -5%
+
+.grid-right
+   left: 5%
+
+@keyframes slide-in-left
+   from
+      left: -5%
+      opacity: 0
+   to
+      left: 0
+      opacity: 1
+
+@keyframes slide-in-right
+   from
+      left: 5%
+      opacity: 0
+   to
+      left: 0
+      opacity: 1
+
+
+// Mobile

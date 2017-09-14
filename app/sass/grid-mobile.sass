@@ -1,0 +1,37 @@
+@import variables
+
+/* Mobile Grid Styles */
+
+// Extra Small Screens (<480px)
+@media only screen and (max-width: $screen-xsm)
+   .container
+      width: 100%
+      padding: 0 5px !important
+
+   [class*='col-']
+      float: none !important
+      width: 100% !important
+
+// Small Screens (between 481px and 767px)
+@media only screen and (min-width: $screen-xsm + 1) and (max-width: $screen-sm)
+   .container
+      width: 100%
+
+   [class*='col-']
+      float: none !important
+      width: 100% !important
+
+// Medium Screens (between 768 and 991)
+@media only screen and (min-width: $screen-sm + 1) and (max-width: $screen-md - 1)
+   .container
+      width: 732px
+
+// Large Screens (between 992 and 1199)
+@media only screen and (min-width: $screen-md) and (max-width: $screen-lg - 1)
+   .container
+      width: 952px
+
+// XLarge Screens (>1200px)
+@media only screen and (min-width: $screen-lg)
+   .container
+      width: 1152px

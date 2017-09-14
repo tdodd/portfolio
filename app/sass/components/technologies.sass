@@ -1,0 +1,55 @@
+@import ../variables
+
+// Width of a card at fullscreen
+$card-width: 247px
+
+.grid-item
+   opacity: 0
+   padding: 10px 0
+   background: white
+   text-align: center
+   box-shadow: $card-shadow
+   margin: 8px
+   height: 200px
+   position: relative
+   transition: .5s
+
+   &:hover
+      box-shadow: $card-shadow-hover
+
+   img
+      max-width: 200px
+      max-height: 160px
+
+.grid-item-text
+   position: absolute
+   width: 100%
+   bottom: 2px
+   text-align: center
+
+// Pop In Animation
+.pop-in
+   animation: pop-in 1s ease-in-out
+   animation-fill-mode: forwards
+
+@keyframes pop-in
+   from
+      opacity: 0
+   to
+      opacity: 1
+
+// Medium Screens
+@media screen and (max-width: $screen-md)
+   .grid-item
+      img
+         max-width: 140px
+
+// Small Screens
+@media screen and (max-width: $screen-sm)
+   .grid-item
+      max-width: $card-width
+      margin: 15px auto
+      padding: 10px 0 0 0
+
+      img
+         max-width: 145px

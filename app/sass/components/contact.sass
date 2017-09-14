@@ -1,0 +1,76 @@
+@import ../variables
+
+// Contact Card
+.contact-card
+   background: white
+   position: relative
+   width: 450px
+   word-wrap: break-word
+   margin: 25px auto   
+   padding: 0 10px 10px 10px
+   box-shadow: $card-shadow
+   transition: .5s
+
+   &:hover
+      box-shadow: $card-shadow-hover
+
+// Name Header
+.contact-header
+   margin-bottom: 5px
+   text-align: center
+   font-size: 1.6em
+   color: rgba(0,0,0,.7)
+
+.contact-left
+   float: left
+
+.contact-right
+   float: right
+
+// Round profile image
+.contact-card-img
+   background: url('../../images/profile.png')
+   background-size: cover
+   background-position: center
+   width: 150px
+   height: 150px
+   border-radius: 50%
+   filter: drop-shadow(0 2px 2px rgba(0,0,0,.3))
+
+// Right Side Contact Info
+.contact-inline
+   display: inline-block
+   margin: 1px 0
+
+.contact-text
+   position: relative
+   bottom: 3px
+   left: 3px
+
+// Small Screens
+@media screen and (max-width: $screen-sm)
+   .contact-card
+      width: 400px
+
+// Extra Small Screens
+@media screen and (max-width: $screen-xsm)
+   .contact-card
+      width: auto
+      margin: 25px 15px
+      text-align: center
+      z-index: -2 // Below profile img
+
+   .contact-card-img
+      z-index: -1 // Above card
+      position: absolute
+      top: 2px
+      left: 2px
+      width: 35px
+      height: 35px
+      filter: none
+
+   .contact-icon
+      display: none
+
+   .contact-right
+      float: none

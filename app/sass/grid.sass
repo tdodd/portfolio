@@ -1,0 +1,44 @@
+@import variables
+
+/* Grid Styles */
+
+// Grid Container
+.container
+   margin: 0 auto
+   padding: 0 1px
+
+// Grid Row
+.row
+   margin: 0 -1px
+
+// Grid Columns
+[class*='col-']
+   position: relative
+   padding: 0 1px
+   float: left
+
+// Column Widths
+.col-12
+   width: 100%
+.col-10
+   width: 83.34%
+.col-8
+   width: 66.67%
+.col-6
+   width: 50%
+.col-4
+   width: 33.33%
+.col-3
+   width: 25%
+.col-2
+   width: 16.66%
+.col-1
+   width: 8.33%
+
+.row:before,
+.row:after,
+.container:before,
+.container:after,
+   content: " "
+   display: table
+   clear: both !important
