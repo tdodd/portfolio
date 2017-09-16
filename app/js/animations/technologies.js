@@ -11,22 +11,18 @@
    // Check if cards are in the viewport on scroll
    window.addEventListener('scroll', (event) => {
 
-      if (!flag) {
+      if (!flag && checkListInViewport(cards)) {
 
-         if (checkListInViewport(cards)) {
+         flag = true;
 
-            flag = true;
+         // Loop through cards and add animations
+         for (let i = 0; i < cards.length; i++) {
 
-            // Loop through cards and add animations
-            for (let i = 0; i < cards.length; i++) {
+            // Generate random time (in ms) between 0 and 1000
+            const rnd = Math.floor(Math.random() * 1000);
 
-               // Generate random time (in ms) between 0 and 1000
-               const rnd = Math.floor(Math.random() * 1000);
-
-               // Delay, then add class
-               setTimeout(() => cards[i].classList.add('pop-in'), rnd);
-
-            }
+            // Delay, then add class
+            setTimeout(() => cards[i].classList.add('pop-in'), rnd);
 
          }
 

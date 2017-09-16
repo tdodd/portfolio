@@ -11,8 +11,6 @@ function checkListInViewport(list) {
 
    for (let i = 0; i < list.length; i++) {
       if (inViewport(list[i])) {
-         console.log(list[i]);
-         console.log('is in the viewport!');
          return true;
       }
    }

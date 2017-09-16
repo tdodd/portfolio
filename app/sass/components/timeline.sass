@@ -1,10 +1,15 @@
-@import ../variables
+@import '../variables'
 
-.hidden
-   visibility: hidden
+// Dimensions
+$timeline-content-width: 275px
+$timeline-circle-width: 60px
+$timeline-triangle-width: 15px
+$timeline-spacing: 75px
 
-.none
-   display: none
+// Box Shadows
+$timeline-shadow-right: drop-shadow(6px 6px 8px rgba(0,0,0,.4))
+$timeline-shadow-left: drop-shadow(-4px 6px 8px rgba(0,0,0,.4))
+$circle-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15)
 
 // Slide-in Animations
 .animate-in-right
@@ -29,62 +34,58 @@
       opacity: 1
       right: 0
 
-// First Circle
-.timeline-head 
-   width: 50px
-   height: 50px
-   background: white
-   border-radius: 50%
-   margin: 30px auto 0 auto
-   box-shadow: $circle-shadow
-
-// Timeline
+// Timeline ul
 .timeline 
-   padding: 0 0 20px 0
-   margin: 0
+   padding: 0
+   margin: 30px 0 0 0
    display: flex
    flex-direction: column
    align-items: center
+   position: relative
 
-// First List Element
-.timeline-item:first-child 
-   margin-top: -5px
-
-// Last List Element
-.timeline-item:last-child 
-   padding-bottom: 0
+// Vertical Timeline Bar
+.vertical-bar
+   width: 10px
+   height: 100%
+   position: absolute
+   background: rgba(255,255,255,.7)
 
 // List Element
-.timeline-item 
-   width: 315px
+.timeline-item
+   width: 100%
+   position: relative
+   margin-bottom: $timeline-spacing
    list-style-type: none
-   padding-top: 50px
-   padding-bottom: 50px
 
 // Timeline Circle
-.timeline-indicator 
-   position: relative
-   top: 50px
-   width: 50px
-   height: 50px
+.timeline-indicator
+   z-index: 2
+   position: absolute
+   width: $timeline-circle-width
+   height: $timeline-circle-width
+   left: 50%
+   margin-left: -$timeline-circle-width / 2
    background: white
    border-radius: 50%
    box-shadow: $circle-shadow
+
+// Timeline Date
+.timeline-date
+   font-size: 1.6em
+   position: absolute
+   width: 50%
+   padding-top: 10px
+
+.timeline-date-sm
+   display: none
 
 // Content Container
 .timeline-content
    position: relative
-   top: -55px
    background: $primary-color
    color: $primary-text-color
-   padding: 0 20px 15px 20px
+   padding: 15px
    border-radius: 3px
-
-// Date
-.timeline-date
-   font-size: 1.6em
-   position: relative
-   top: 10px
 
 // Triangle
 .timeline-triangle
@@ -92,8 +93,8 @@
    height: 0
    border-top: 15px solid transparent
    border-bottom: 15px solid transparent
-   position: relative
-   top: 35px
+   position: absolute
+   top: 15px
 
 // Header
 .timeline-header
@@ -109,119 +110,112 @@
    border: none
    border-radius: 5px
    text-transform: uppercase
-   padding: 15px 17px
+   padding: 12px 22px
    margin-top: 15px
    font-size: 1em
 
-   &:focus 
-      outline: none
-
    &:hover 
       cursor: pointer
-      background: #BD773D
-      box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.45)
+      background: $secondary-hover
 
-// Pull Left
-.timeline-item-left
-   margin-right: 300px
-   border-right: 12px solid white
-   padding-right: 25px
+   &:active
+      background: $secondary-active
 
-.timeline-indicator-left
-   right: -285px
+   &:focus
+      outline: none
 
+// Timeline Left
 .timeline-content-left
-   margin-right: 50px
-   filter: $timeline-shadow
+   margin-right: 58%
+   filter: $timeline-shadow-left
 
 .timeline-date-left 
-   right: -400px
+   left: 50%
+   text-align: left
+   padding-left: $timeline-circle-width
 
 .timeline-triangle-left 
-   border-left: 15px solid $primary-color
-   right: -208px
+   border-left: $timeline-triangle-width solid $primary-color
+   right: -$timeline-triangle-width
 
-// Pull Right
-.timeline-item-right 
-   margin-left: 305px
-   border-left: 12px solid white
-   padding-left: 25px
-
-.timeline-indicator-right 
-   left: -56px
-
+// Timeline Right
 .timeline-content-right 
-   margin-left: 50px
-   filter: $timeline-shadow
+   margin-left: 58%
+   filter: $timeline-shadow-right
 
 .timeline-date-right 
-   left: -245px
+   text-align: right
+   padding-right: $timeline-circle-width
 
 .timeline-triangle-right 
-   border-right: 15px solid $primary-color
-   right: 35px
+   border-right: $timeline-triangle-width solid $primary-color
+   left: -$timeline-triangle-width
+
+//-----------------------------------------------------
+// Mobile Styles
+//-----------------------------------------------------
 
 // Small Screens
-@media screen and (max-width: $screen-sm) 
-
-   // Remove Animations
+@media screen and (max-width: $screen-sm)
    .animate-in-left,
    .animate-in-right
       animation: none
-  
-   .timeline-head
-      margin: 25px 0 0 50px
-  
+
+   .vertical-bar
+      left: 32px
+
+   .timeline-indicator
+      left: 5%
+      
    .timeline
+      margin-top: 0
       align-items: left
 
-   .timeline-item
-      width: auto
-      margin-left: 68px
+   .timeline-content-left,
+   .timeline-content-right
+      margin-left: 90px
       margin-right: 15px
-      padding-bottom: 0
 
    .timeline-date
       display: none
 
+   .timeline-date-sm
+      display: block
+      margin-bottom: 10px
+
    .timeline-content
-      top: -25px
-      filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.4))
+      filter: $timeline-shadow-right
   
-   // Pull Left
-   .timeline-item-left
-      border-right: none
-      border-left: 12px solid white
-      padding-left: 25px
-      padding-right: 0
-
-   .timeline-indicator-left 
-      right: 0
-      left: -56px  
-
    .timeline-triangle-left 
       border-left: none
       border-right: 15px solid $primary-color
-      right: 35px
+      left: -$timeline-triangle-width
 
-   .timeline-content-left 
-      margin-right: 0
-      margin-left: 50px
+   .timeline-btn
+      position: absolute
+      right: 15px
+      bottom: 10px
   
 // Extra Small Screens
 @media screen and (max-width: $screen-xsm)
-   .timeline-head,
    .timeline-indicator,
-   .timeline-triangle 
+   .timeline-triangle,
+   .vertical-bar
       display: none
   
    .timeline-item 
-      border: none
       margin: 0
       padding: 0 8px
   
    .timeline-content 
       position: static
       width: 100%
-      margin: 15px 0
+      margin: 20px 0
       padding: 12px
+
+   .timeline-date-sm
+      margin-bottom: 15px
+
+   .timeline-btn
+      right: 20px
+      bottom: 30px

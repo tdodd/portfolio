@@ -1,5 +1,7 @@
 @import ../variables
 
+$img-diameter: 200px // Profile image size
+
 .img-container
    overflow: hidden
 
@@ -36,10 +38,10 @@
    filter: $profile-shadow
 
 .profile-animation
-   animation: fade-in-up 1.5s
+   animation: profile-animation 1.5s ease-in-out
    animation-fill-mode: forwards
 
-@keyframes fade-in-up
+@keyframes profile-animation
    from
       top: 0
    to

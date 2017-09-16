@@ -10,18 +10,21 @@
    let flag = false;
 
    // Check on page load
-   if (inViewport(profilePicture)) showImage();
+   if (inViewport(profilePicture)) {
+      showImage();
+   }
 
    // Check if any elements are in the viewport on scroll
    window.addEventListener('scroll', (event) => {
-      if (!flag && inViewport(profilePicture)) showImage();
+      if (!flag && inViewport(profilePicture)) {
+         showImage();
+      }
    });
 
    /**
     * Animate picture
     */
    function showImage() {
-      console.log('showin');
       flag = true;
       profilePicture.classList.add('profile-animation');
    }

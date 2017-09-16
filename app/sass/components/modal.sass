@@ -4,20 +4,25 @@
 
 @import ../variables
 
+$modal-fadein-time: .4s
+$modal-width: 500px
+$modal-body-height: 265px
+
 // Modal
 .modal
    z-index: 10
-   width: 500px
+   width: $modal-width
    position: fixed
    top: 25%
    left: 0
    right: 0
    margin: 5% auto  
    border-radius: 3px
-   background: pink
+   background: $primary-color
+   color: $primary-text-color
    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.6)
 
-// Close Button
+// Top-Right Close Button
 .header-btn 
    position: absolute
    right: 10px
@@ -31,8 +36,9 @@
    font-size: 2em
    padding-top: 12px
 
+// Modal Body
 .modal-body 
-   padding: 20px
+   padding: 0 30px 30px 30px
 
 .modal-footer 
    background: white
@@ -41,25 +47,48 @@
    border-bottom-left-radius: 3px
 
 .footer-btn 
-   margin: 25px 0
+   margin: 15px 0
    border: none
    font-size: 1.2em
    padding: 10px 25px
    border-radius: 2px
    text-transform: uppercase
-   background: teal
-   color: #FFF
+   background: $secondary-color
+   color: $secondary-text-color
+
+   &:hover
+      background: $secondary-hover
+
+   &:active
+      background: $secondary-active
+
+   &:focus
+      outline: none
 
 /* Modal Animations */
 .fade-in-up 
-   animation: fade-in-up .4s ease-in-out
+   animation: fade-in-up $modal-fadein-time ease-in-out
    animation-fill-mode: forwards
 
-@keyframes fade-in-up 
-   from
+.fade-out-down
+   animation: fade-out-down $modal-fadein-time ease-in-out
+   animation-fill-mode: forwards
+
+@keyframes fade-in-up
+   0%
       top: 20%
-   to 
+   15%
+      top: 22%
+   100%
       top: 10%
+
+@keyframes fade-out-down
+   0%
+      top: 10%
+   15%
+      top: 8%
+   100%
+      top: 20%
 
 // Small Screens
 @media screen and (max-width: $screen-sm)
@@ -67,4 +96,14 @@
       width: auto
       margin: 0 10px
 
+   .modal-body
+      padding: 0 10px 10px 10px
+
+   .header-btn 
+      right: 5px
+
+@media screen and (max-width: $screen-xsm)
+   .modal-body
+      max-height: $modal-body-height
+      overflow-y: scroll
       

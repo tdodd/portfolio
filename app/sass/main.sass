@@ -6,16 +6,31 @@ body
    background: $bg-color
    font-family: 'Open Sans', sans-serif
 
-*, *:before, *:after
+*,
+*:before,
+*:after
    box-sizing: border-box
 
 .clearfix
    clear: both
 
+.hidden
+   visibility: hidden
+
+.none
+   display: none
+
 a
    color: $primary-color
    text-decoration: none
-   border-bottom: 1px dotted
+   border-bottom: 1px dotted $primary-color
 
    &:visited
       color: $primary-color
+
+.page-overlay
+   background: rgba(0,0,0,.6)
+   position: absolute
+   left: 0
+   right: 0
+   z-index: 9 // Below modal

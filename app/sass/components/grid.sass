@@ -1,4 +1,4 @@
-@import ../variables
+@import '../variables'
 
 // Left Side
 .alpha-light
@@ -31,12 +31,6 @@
    animation: slide-in-right 2s ease-in-out
    animation-fill-mode: forwards
 
-.grid-left
-   left: -5%
-
-.grid-right
-   left: 5%
-
 @keyframes slide-in-left
    from
       left: -5%
@@ -51,4 +45,11 @@
       opacity: 0
    to
       left: 0
+      opacity: 1
+
+// Small Screens
+@media screen and (max-width: $screen-sm)
+   .slide-in-left,
+   .slide-in-right
+      animation: none
       opacity: 1

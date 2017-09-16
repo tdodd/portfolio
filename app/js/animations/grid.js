@@ -10,6 +10,11 @@
 	// Set to true once grid has been animated
 	let flag = false;
 
+	// Check on page load
+	if (checkListInViewport(gridLeft) || checkListInViewport(gridRight)) {
+		showGrid();
+	}
+
 	// Check if any elements are in the viewport on scroll
 	window.addEventListener('scroll', (event) => {
 

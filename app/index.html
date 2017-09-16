@@ -20,6 +20,9 @@
 </head>
 <body>
 
+   <!-- Page Overlay -->
+   <div class="page-overlay none"></div>
+
    <!-- Header Section -->
    <header>
       <div class="overlay"></div>
@@ -211,37 +214,39 @@
 
          <div class="section-header">Here is some of the cool stuff I've done</div>
 
-         <!-- Timeline Circle -->
-         <div class="timeline-head"></div>
-
          <!--Vertical Timeline-->
          <ul class="timeline">
 
-            <!-- Timeline Item -->
-            <li class="timeline-item timeline-item-right">
+            <!-- Vertical Timeline Bar -->
+            <div class="vertical-bar"></div>
 
-               <div class="timeline-indicator timeline-indicator-right"></div>
-               <div class="timeline-date timeline-date-right">2015 - Present</div>
+            <!-- Personal Portfolio Website -->
+            <li class="timeline-item">
+
+               <div class="timeline-indicator"></div>
+               <div class="timeline-date timeline-date-right">2017</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-0">
                   <div class="timeline-triangle timeline-triangle-right"></div>
-                  <div class="timeline-header">Job Title</div>
+                  
+                  <div class="timeline-header">Personal Portfolio Website</div>
                   <div class="timeline-text">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident sint, doloribus aut cumque
+                     <p>Development of the website you're currently visiting!</p>
                   </div>
+                  <div class="timeline-date-sm">2017</div>
                   <button class="timeline-btn" data-trigger-id="modal-0">More</button>
+               
                </div>
 
                <!-- Modal -->
-               <div id="modal-0" class="modal fade-in-up none">
+               <div id="modal-0" class="modal none">
 
                   <div class="close-btn header-btn" data-trigger-id="modal-0">x</div>
-                  <div class="modal-header">Job Title</div>
-                  <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                     deserunt mollit anim id est laborum."</div>
+                  <div class="modal-header">Personal Portfolio Website</div>
+                  <div class="modal-body">
+                     <p>This website showcases my employment history, past projects, as well as the technologies I have used.</p>
+                     <p>It is fully responsive! Try resizing the browser or viewing the site on your phone.</p>
+                  </div>
                   <div class="modal-footer">
                      <button class="close-btn footer-btn" data-trigger-id="modal-0">Close</button>
                   </div>
@@ -250,31 +255,34 @@
 
             </li>
 
-            <!-- Timeline Item Left -->
-            <li class="timeline-item timeline-item-left">
+            <!-- Arts Assistant Webmaster -->
+            <li class="timeline-item">
 
-               <div class="timeline-indicator timeline-indicator-left"></div>
-               <div class="timeline-date timeline-date-left">2016 - 2017</div>
+               <div class="timeline-indicator"></div>
+               <div class="timeline-date timeline-date-left">May 2015 - Sept 2017</div>
 
                <div class="timeline-content timeline-content-left hidden" id="timeline-1">
+                  
                   <div class="timeline-triangle timeline-triangle-left"></div>
-                  <div class="timeline-header">Job Title</div>
+                  <div class="timeline-header">Assistant Webmaster</div>
                   <div class="timeline-text">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident sint, doloribus aut cumque
+                     <p>Faculty of Arts, University of Ottawa</p>
+                     <p>Improving and maintaining the Faculty of Arts websites alongside marketing and communications personnel.</p>
                   </div>
+                  
+                  <div class="timeline-date-sm">May 2015 - Sept 2017</div>
                   <button class="timeline-btn" data-trigger-id="modal-1">More</button>
+               
                </div>
 
                <!-- Modal -->
-               <div id="modal-1" class="modal fade-in-up none">
+               <div id="modal-1" class="modal none">
 
                   <div class="close-btn header-btn" data-trigger-id="modal-1">x</div>
-                  <div class="modal-header">Job Title</div>
-                  <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                     deserunt mollit anim id est laborum."</div>
+                  <div class="modal-header">Assistant Webmaster</div>
+                  <div class="modal-body">
+                     <p>In this position, I </p>
+                  </div>
                   <div class="modal-footer">
                      <button class="close-btn footer-btn" data-trigger-id="modal-1">Close</button>
                   </div>
@@ -283,23 +291,27 @@
 
             </li>
 
-            <!-- Timeline Item Right -->
-            <li class="timeline-item timeline-item-right">
+            <!-- Capstone Project (2016) -->
+            <li class="timeline-item">
 
-               <div class="timeline-indicator timeline-indicator-right"></div>
-               <div class="timeline-date timeline-date-right">2015</div>
+               <div class="timeline-indicator"></div>
+               <div class="timeline-date timeline-date-right">Aug 2016 - Apr 2017</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-2">
+                  
                   <div class="timeline-triangle timeline-triangle-right"></div>
-                  <div class="timeline-header">Job Title</div>
+                  <div class="timeline-header">Neutron Connect Capstone Project</div>
                   <div class="timeline-text">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident sint, doloribus aut cumque
+                     <p>Angular2 and Node.js social media application using the MVC design pattern.</p>
                   </div>
+                  
+                  <div class="timeline-date-sm">Aug 2016 - Apr 2017</div>
                   <button class="timeline-btn" data-trigger-id="modal-2">More</button>
+               
                </div>
 
                <!-- Modal -->
-               <div id="modal-2" class="modal fade-in-up none">
+               <div id="modal-2" class="modal none">
 
                   <div class="close-btn header-btn" data-trigger-id="modal-2">x</div>
                   <div class="modal-header">Job Title</div>
@@ -316,23 +328,28 @@
 
             </li>
 
-            <!-- Timeline Item Left -->
-            <li class="timeline-item timeline-item-left">
+            <!-- Iberian Diaspora (2016) -->
+            <li class="timeline-item">
 
-               <div class="timeline-indicator timeline-indicator-left"></div>
-               <div class="timeline-date timeline-date-left">2011 - 2015</div>
+               <div class="timeline-indicator"></div>
+               <div class="timeline-date timeline-date-left">May - Sept 2016</div>
 
                <div class="timeline-content timeline-content-left hidden" id="timeline-3">
+                  
                   <div class="timeline-triangle timeline-triangle-left"></div>
-                  <div class="timeline-header">Job Title</div>
+                  <div class="timeline-header">Iberian Diaspora Research Project</div>
                   <div class="timeline-text">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident sint, doloribus aut cumque
+                     <p>Department of Modern Languages, University of Ottawa</p>
+                     <p>Development of a full-stack, bilingual web application using the Laravel PHP framework.</p>
                   </div>
+
+                  <div class="timeline-date-sm">May - Sept 2016</div>
                   <button class="timeline-btn" data-trigger-id="modal-3">More</button>
+              
                </div>
 
                <!-- Modal -->
-               <div id="modal-3" class="modal fade-in-up none">
+               <div id="modal-3" class="modal none">
 
                   <div class="close-btn header-btn" data-trigger-id="modal-3">x</div>
                   <div class="modal-header">Job Title</div>
@@ -349,23 +366,28 @@
 
             </li>
 
-            <!-- Timeline Item Right -->
-            <li class="timeline-item timeline-item-right">
+            <!-- FSS Assistant Webmaster (2015) -->
+            <li class="timeline-item">
 
-               <div class="timeline-indicator timeline-indicator-right"></div>
-               <div class="timeline-date timeline-date-right">2010</div>
+               <div class="timeline-indicator"></div>
+               <div class="timeline-date timeline-date-right">Jan - May 2015</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-4">
+                  
                   <div class="timeline-triangle timeline-triangle-right"></div>
-                  <div class="timeline-header">Job Title</div>
+                  <div class="timeline-header">Junior Webmaster</div>
                   <div class="timeline-text">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident sint, doloribus aut cumque
+                     <p>Faculy of Social Sciences, University of Ottawa</p>
+                     <p>Website maintenance and updates. Content management and migration in Drupal 7.</p>
                   </div>
+
+                  <div class="timeline-date-sm">Jan - May 2015</div>
                   <button class="timeline-btn" data-trigger-id="modal-2">More</button>
+               
                </div>
 
                <!-- Modal -->
-               <div id="modal-4" class="modal fade-in-up none">
+               <div id="modal-4" class="modal none">
 
                   <div class="close-btn header-btn" data-trigger-id="modal-4">x</div>
                   <div class="modal-header">Job Title</div>
@@ -420,7 +442,7 @@
                      <img src="images/icons/github.png" alt="Thomas Dodd's Github" width="20" height="20">
                   </div>
 
-                  <a href="https://github.com/tdodd/" class="contact-text contact-inline">Github</a>
+                  <a href="https://github.com/tdodd/" target="_blank" class="contact-text contact-inline">Github</a>
 
                </div>
                
@@ -431,7 +453,7 @@
                      <img src="images/icons/linkedin.png" alt="Thomas Dodd's Github" width="20" height="20">
                   </div>
 
-                  <a href="https://www.linkedin.com/in/thomas-dodd-683a6b89/" class="contact-text contact-inline">Linkedin</a>
+                  <a href="https://www.linkedin.com/in/thomas-dodd-683a6b89/" target="_blank" class="contact-text contact-inline">Linkedin</a>
                
                </div>
                
