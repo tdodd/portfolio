@@ -21,6 +21,7 @@
     * Animate picture
     */
    function showImage() {
+      console.log('showin');
       flag = true;
       profilePicture.classList.add('profile-animation');
    }

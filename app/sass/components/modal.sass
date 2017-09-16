@@ -1,0 +1,70 @@
+/**
+ * Modal Styles
+ */
+
+@import ../variables
+
+// Modal
+.modal
+   z-index: 10
+   width: 500px
+   position: fixed
+   top: 25%
+   left: 0
+   right: 0
+   margin: 5% auto  
+   border-radius: 3px
+   background: pink
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.6)
+
+// Close Button
+.header-btn 
+   position: absolute
+   right: 10px
+   font-size: 1.5em
+
+.close-btn:hover 
+   cursor: pointer
+
+.modal-header 
+   text-align: center
+   font-size: 2em
+   padding-top: 12px
+
+.modal-body 
+   padding: 20px
+
+.modal-footer 
+   background: white
+   text-align: center
+   border-bottom-right-radius: 3px
+   border-bottom-left-radius: 3px
+
+.footer-btn 
+   margin: 25px 0
+   border: none
+   font-size: 1.2em
+   padding: 10px 25px
+   border-radius: 2px
+   text-transform: uppercase
+   background: teal
+   color: #FFF
+
+/* Modal Animations */
+.fade-in-up 
+   animation: fade-in-up .4s ease-in-out
+   animation-fill-mode: forwards
+
+@keyframes fade-in-up 
+   from
+      top: 20%
+   to 
+      top: 10%
+
+// Small Screens
+@media screen and (max-width: $screen-sm)
+   .modal
+      width: auto
+      margin: 0 10px
+
+      

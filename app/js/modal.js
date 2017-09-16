@@ -1,50 +1,50 @@
 /**
  * Open and close modals
  */
+(() => {
 
-// Get modal buttons
-var modalButtons = document.querySelectorAll('.timeline-btn');
-var closeButtons = document.querySelectorAll('.close-btn');
+   // Get modal buttons
+   const modalButtons = document.querySelectorAll('.timeline-btn');
+   const closeButtons = document.querySelectorAll('.close-btn');
 
-// Add click listeners
+   // Add click listeners to open buttons
+   for (let i = 0; i < modalButtons.length; i++) {
+      modalButtons[i].addEventListener('click', (event) => {
+         event.preventDefault();
+         showModal(event.target);
+      });
+   }
 
-// Modal open buttons
-for (var i = 0; i < modalButtons.length; i++) {
-    modalButtons[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        showModal(e.target);
-    });
-}
+   //  Add click listeners to close buttons
+   for (let i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].addEventListener('click', (event) => {
+         event.preventDefault();
+         closeModal(event.target);
+      });
+   }
 
-// Modal close buttons
-for (var i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        closeModal(e.target);
-    });
-}
+   // Utilities
 
-// Utilities
+   /**
+   * Show a modal dialog
+   * @param {DomNode} button the modal that was triggered 
+   */
+   function showModal(button) {
+      const id = button.dataset.triggerId;
+      const modal = document.querySelector(`#${id}`);
+      modal.classList.add('showing');
+      modal.classList.remove('none');
+   }
 
-/**
-* Show a modal dialog
-* @param {DomNode} modal the modal that was triggered 
-*/
-function showModal(button) {
-    var id = button.dataset.triggerId;
-    var modal = document.querySelector('#'+ id);
-    modal.classList.add('showing');
-    modal.classList.remove('none');
-}
+   /**
+   * Hide a modal dialog
+   * @param {DomNode} button the modal button that was clicked
+   */
+   function closeModal(button) {
+      const id = button.dataset.triggerId;
+      const modal = document.querySelector(`#${id}`);
+      modal.classList.remove('showing');
+      modal.classList.add('none');
+   }
 
-/**
-* Hide a modal dialog
-* @param {DomNode} button the button that was clicked
-*/
-function closeModal(button) {
-    var id = button.dataset.triggerId;
-    var modal = document.querySelector('#'+ id);
-    modal.classList.remove('showing');
-    modal.classList.add('none');
-}
-
+})();

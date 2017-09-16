@@ -23,9 +23,19 @@
 	 * Animate the Grid
 	 */
 	function showGrid() {
-		flag = true;
-		for (let i = 0; i < gridLeft.length; i++) gridLeft[i].classList.add('slide-in-left');
-		for (let j = 0; j < gridRight.length; j++) gridRight[j].classList.add('slide-in-right');
-	}
+
+      flag = true; // Set flag
+
+      // Animate left side
+      for (let i = 0; i < gridLeft.length; i++) {
+         gridLeft[i].classList.add('slide-in-left');
+      }
+      
+      // Animate right side
+      for (let j = 0; j < gridRight.length; j++) {
+         gridRight[j].classList.add('slide-in-right');
+      }
+   
+   }
 
 })();

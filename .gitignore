@@ -3,3 +3,6 @@
 
 # Compiled Output
 /app/build
+
+# Editor Files
+.vscode

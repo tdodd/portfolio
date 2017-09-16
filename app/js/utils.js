@@ -22,8 +22,8 @@ function checkListInViewport(list) {
 }
 
 /**
- * Checks if a given element is currently in the viewport
- * @param  {domNode} elem The element to check
+ * Checks if a given element is completely in the viewport
+ * @param {domNode} elem The element to check
  * @return {bool} true if the element is in the viewport and false otherwise
  */
 function inViewport(elem) {

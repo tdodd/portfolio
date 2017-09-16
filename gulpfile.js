@@ -10,6 +10,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
 const rename = require("gulp-rename");
+const sourcemaps = require('gulp-sourcemaps');
 
 /**
  * Location Constants
@@ -46,9 +47,11 @@ gulp.task('compile-sass', () => {
  */
 gulp.task('compile-es6', () => {
    gulp.src([es6In, '!app/js/main.bundle.js']) // Don't recompile bundle
+      .pipe(sourcemaps.init())
       .pipe(babel({ presets: ['es2015'] }))
       .pipe(uglify())
       .pipe(concat('main.bundle.js'))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(es6OutDev))
       .pipe(gulp.dest(es6OutProd))
       .pipe(browserSync.stream());
