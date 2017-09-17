@@ -1,6 +1,15 @@
+//-----------------------------------------------------
+// Utility functions used by other js files
+//-----------------------------------------------------
+
+
 /**
- * Utlility functions used by other js files
+ * Get the current viewport width
+ * @return {number} the current viewport width
  */
+function getViewportWidth() {
+   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+}
 
 /**
  * Loops through a list of elements to see if any are in the viewport

@@ -11,7 +11,7 @@
    const overlay = document.querySelector('.page-overlay');
 
    // Modal fade out duration (in ms)
-   const fadeOutTime = 350;
+   const fadeOutTime = 400;
 
    // Add click listeners to open buttons
    for (let i = 0; i < modalButtons.length; i++) {

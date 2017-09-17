@@ -1,8 +1,4 @@
-/**
- * Modal Styles
- */
-
-@import ../variables
+@import '../variables'
 
 $modal-fadein-time: .4s
 $modal-width: 500px
@@ -13,7 +9,7 @@ $modal-body-height: 265px
    z-index: 10
    width: $modal-width
    position: fixed
-   top: 25%
+   top: 20%
    left: 0
    right: 0
    margin: 5% auto  
@@ -76,19 +72,19 @@ $modal-body-height: 265px
 
 @keyframes fade-in-up
    0%
-      top: 20%
-   15%
-      top: 22%
+      opacity: 0
+      transform: scale(.5)
    100%
-      top: 10%
+      opacity: 1
+      transform: scale(1)
 
 @keyframes fade-out-down
    0%
-      top: 10%
-   15%
-      top: 8%
+      opacity: 1
+      transform: scale(1)
    100%
-      top: 20%
+      opacity: 0
+      transform: scale(.7)
 
 // Small Screens
 @media screen and (max-width: $screen-sm)
@@ -101,6 +97,7 @@ $modal-body-height: 265px
 
    .header-btn 
       right: 5px
+      top: -5px
 
 @media screen and (max-width: $screen-xsm)
    .modal-body

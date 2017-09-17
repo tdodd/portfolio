@@ -213,6 +213,7 @@
       <section id="projects">
 
          <div class="section-header">Here is some of the cool stuff I've done</div>
+         <div class="section-sub-header">Yes, I like to use animals for my project names.</div>
 
          <!--Vertical Timeline-->
          <ul class="timeline">
@@ -220,10 +221,12 @@
             <!-- Vertical Timeline Bar -->
             <div class="vertical-bar"></div>
 
-            <!-- Personal Portfolio Website -->
+            <!-- Personal Portfolio Website (2017)-->
             <li class="timeline-item">
 
-               <div class="timeline-indicator"></div>
+               <div class="timeline-indicator">
+                  <img src="images/icons/project.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
                <div class="timeline-date timeline-date-right">2017</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-0">
@@ -255,10 +258,91 @@
 
             </li>
 
-            <!-- Arts Assistant Webmaster -->
+            <!-- MeetPanda (2017) -->
             <li class="timeline-item">
 
-               <div class="timeline-indicator"></div>
+               <div class="timeline-indicator">
+                  <img src="images/icons/project.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
+               <div class="timeline-date timeline-date-left">2017</div>
+
+               <div class="timeline-content timeline-content-left hidden" id="timeline-0">
+                  <div class="timeline-triangle timeline-triangle-left"></div>
+
+                  <div class="timeline-header">MeetPanda</div>
+                  <div class="timeline-text">
+                     <p>Find out about meetups near you.</p>
+                  </div>
+                  <div class="timeline-date-sm">2017</div>
+                  <button class="timeline-btn" data-trigger-id="modal-1">More</button>
+
+               </div>
+
+               <!-- Modal -->
+               <div id="modal-1" class="modal none">
+
+                  <div class="close-btn header-btn" data-trigger-id="modal-1">x</div>
+                  <div class="modal-header">MeetPanda</div>
+                  <div class="modal-body">
+                     <p>This small Node.js web application uses your current location to find meetups. Specify a radius and see what’s going on around you.</p>
+                     <p>HTML5’s geolocation functionality allows the app to gain access to the client’s location. The Google Maps API then provides
+                     a widget for choosing a radius. With this data, the meetup API can retrieve a list of meetups, which
+                     is then presented to the client.</p>
+                  </div>
+                  <div class="modal-footer">
+                     <button class="close-btn footer-btn" data-trigger-id="modal-1">Close</button>
+                  </div>
+
+               </div>
+
+            </li>
+
+            <!-- DriveShark (2017) -->
+            <li class="timeline-item">
+
+               <div class="timeline-indicator">
+                  <img src="images/icons/project.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
+               <div class="timeline-date timeline-date-right">2017</div>
+
+               <div class="timeline-content timeline-content-right hidden" id="timeline-2">
+
+                  <div class="timeline-triangle timeline-triangle-right"></div>
+                  <div class="timeline-header">DriveShark</div>
+                  <div class="timeline-text">
+                     <p>Get notifications about travel times when you want them.</p>
+                  </div>
+
+                  <div class="timeline-date-sm">2017</div>
+                  <button class="timeline-btn" data-trigger-id="modal-2">More</button>
+
+               </div>
+
+               <!-- Modal -->
+               <div id="modal-2" class="modal none">
+
+                  <div class="close-btn header-btn" data-trigger-id="modal-2">x</div>
+                  <div class="modal-header">DriveShark</div>
+                  <div class="modal-body">
+                     <p>Built with Python and the Django framework, DriveShark lets you add your common trips, and specify when to receive notifications
+                     about travel times to these locations. The user adds a starting point and a destination. This is then
+                     saved as a trip, which the user can request to be notified about when they desire.</p>
+                     <p>Postgresql is the DBMS, while Django provides an MVC structure, as well as a templating engine for the views.</p>
+                  </div>
+                  <div class="modal-footer">
+                     <button class="close-btn footer-btn" data-trigger-id="modal-2">Close</button>
+                  </div>
+
+               </div>
+
+            </li>
+
+            <!-- Arts Assistant Webmaster (2015-2017) -->
+            <li class="timeline-item">
+
+               <div class="timeline-indicator">
+                  <img src="images/icons/work.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
                <div class="timeline-date timeline-date-left">May 2015 - Sept 2017</div>
 
                <div class="timeline-content timeline-content-left hidden" id="timeline-1">
@@ -271,20 +355,26 @@
                   </div>
                   
                   <div class="timeline-date-sm">May 2015 - Sept 2017</div>
-                  <button class="timeline-btn" data-trigger-id="modal-1">More</button>
+                  <button class="timeline-btn" data-trigger-id="modal-3">More</button>
                
                </div>
 
                <!-- Modal -->
-               <div id="modal-1" class="modal none">
+               <div id="modal-3" class="modal none">
 
-                  <div class="close-btn header-btn" data-trigger-id="modal-1">x</div>
+                  <div class="close-btn header-btn" data-trigger-id="modal-3">x</div>
                   <div class="modal-header">Assistant Webmaster</div>
                   <div class="modal-body">
-                     <p>In this position, I </p>
+                     <p>Improving and maintaining the Faculty of Arts websites alongside marketing and communications personnel.</p>
+                     <p>In this position, I developed several web services for students, faculty members, and University employees. Some examples
+                     are a study group registration and management system, a deferred exam system, that allowed students
+                     to request to defer an exam, and an undergraduate office employee to review their application, a program
+                     builder for Faculty of Arts students, and much more.</p>
+                     <p>I was also involved in the development of the websites for all 17 departments. We actively met with department representatives
+                     and sought to improve the design and content of these sites.</p>
                   </div>
                   <div class="modal-footer">
-                     <button class="close-btn footer-btn" data-trigger-id="modal-1">Close</button>
+                     <button class="close-btn footer-btn" data-trigger-id="modal-3">Close</button>
                   </div>
 
                </div>
@@ -294,7 +384,9 @@
             <!-- Capstone Project (2016) -->
             <li class="timeline-item">
 
-               <div class="timeline-indicator"></div>
+               <div class="timeline-indicator">
+                  <img src="images/icons/project.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
                <div class="timeline-date timeline-date-right">Aug 2016 - Apr 2017</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-2">
@@ -306,22 +398,24 @@
                   </div>
                   
                   <div class="timeline-date-sm">Aug 2016 - Apr 2017</div>
-                  <button class="timeline-btn" data-trigger-id="modal-2">More</button>
+                  <button class="timeline-btn" data-trigger-id="modal-4">More</button>
                
                </div>
 
                <!-- Modal -->
-               <div id="modal-2" class="modal none">
+               <div id="modal-4" class="modal none">
 
-                  <div class="close-btn header-btn" data-trigger-id="modal-2">x</div>
-                  <div class="modal-header">Job Title</div>
-                  <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                     deserunt mollit anim id est laborum."</div>
+                  <div class="close-btn header-btn" data-trigger-id="modal-4">x</div>
+                  <div class="modal-header">Neutron Connect Capstone Project</div>
+                  <div class="modal-body">
+                     <p>This project aimed to be a mix of stack overflow and a social media platform, allowing students to post questions for their
+                     courses, upload photos of their work, or post any other content of relevance to their studies.</p>
+                     <p>I implemented a rest API in Node.js, and worked in Angular2 on the front end. I also designed the database in MongoDB, and
+                     implemented several database-related components such as the newsfeed and the comment section for the
+                     application.</p>
+                  </div>
                   <div class="modal-footer">
-                     <button class="close-btn footer-btn" data-trigger-id="modal-2">Close</button>
+                     <button class="close-btn footer-btn" data-trigger-id="modal-4">Close</button>
                   </div>
 
                </div>
@@ -331,7 +425,9 @@
             <!-- Iberian Diaspora (2016) -->
             <li class="timeline-item">
 
-               <div class="timeline-indicator"></div>
+               <div class="timeline-indicator">
+                  <img src="images/icons/work.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
                <div class="timeline-date timeline-date-left">May - Sept 2016</div>
 
                <div class="timeline-content timeline-content-left hidden" id="timeline-3">
@@ -340,26 +436,30 @@
                   <div class="timeline-header">Iberian Diaspora Research Project</div>
                   <div class="timeline-text">
                      <p>Department of Modern Languages, University of Ottawa</p>
-                     <p>Development of a full-stack, bilingual web application using the Laravel PHP framework.</p>
+                     <p>Full-stack development of a bilingual web application using the Laravel PHP framework.</p>
                   </div>
 
                   <div class="timeline-date-sm">May - Sept 2016</div>
-                  <button class="timeline-btn" data-trigger-id="modal-3">More</button>
+                  <button class="timeline-btn" data-trigger-id="modal-5">More</button>
               
                </div>
 
                <!-- Modal -->
-               <div id="modal-3" class="modal none">
+               <div id="modal-5" class="modal none">
 
-                  <div class="close-btn header-btn" data-trigger-id="modal-3">x</div>
-                  <div class="modal-header">Job Title</div>
-                  <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                     deserunt mollit anim id est laborum."</div>
+                  <div class="close-btn header-btn" data-trigger-id="modal-5">x</div>
+                  <div class="modal-header">Iberian Diaspora Research Project</div>
+                  <div class="modal-body">
+                     <p>This research project is an archive of Spanish and Portuguese speaking migrants from the Iberian peninsula between the 15th
+                     and 17th centuries. It contains information about their relationships to other migrants, occupations,
+                     and the sources used to obtain this information, among other personal details.</p>
+                     <p>The application has a client-facing portal, allowing users to perform searches based on location, occupation, date of birth,
+                     etc. It also has an admin side, that allows researchers to log in and enter data, source information,
+                     relationships, and filter the results. This was all implemented using the excellent PHP framework that
+                     is Laravel!</p>
+                  </div>
                   <div class="modal-footer">
-                     <button class="close-btn footer-btn" data-trigger-id="modal-3">Close</button>
+                     <button class="close-btn footer-btn" data-trigger-id="modal-5">Close</button>
                   </div>
 
                </div>
@@ -369,7 +469,9 @@
             <!-- FSS Assistant Webmaster (2015) -->
             <li class="timeline-item">
 
-               <div class="timeline-indicator"></div>
+               <div class="timeline-indicator">
+                  <img src="images/icons/work.png" class="indicator-image" alt="Personal Portfolio Website">
+               </div>
                <div class="timeline-date timeline-date-right">Jan - May 2015</div>
 
                <div class="timeline-content timeline-content-right hidden" id="timeline-4">
@@ -377,27 +479,29 @@
                   <div class="timeline-triangle timeline-triangle-right"></div>
                   <div class="timeline-header">Junior Webmaster</div>
                   <div class="timeline-text">
-                     <p>Faculy of Social Sciences, University of Ottawa</p>
+                     <p>Faculty of Social Sciences, University of Ottawa</p>
                      <p>Website maintenance and updates. Content management and migration in Drupal 7.</p>
                   </div>
 
                   <div class="timeline-date-sm">Jan - May 2015</div>
-                  <button class="timeline-btn" data-trigger-id="modal-2">More</button>
+                  <button class="timeline-btn" data-trigger-id="modal-6">More</button>
                
                </div>
 
                <!-- Modal -->
-               <div id="modal-4" class="modal none">
+               <div id="modal-6" class="modal none">
 
-                  <div class="close-btn header-btn" data-trigger-id="modal-4">x</div>
-                  <div class="modal-header">Job Title</div>
-                  <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                     deserunt mollit anim id est laborum."</div>
+                  <div class="close-btn header-btn" data-trigger-id="modal-6">x</div>
+                  <div class="modal-header">Junior Webmaster</div>
+                  <div class="modal-body">
+                     <p>Website maintenance and updates. Content management and migration in Drupal 7. This was my introduction to the professional
+                     workplace. The Faculty of Social Sciences hired me to aid them in their transition to the Drupal content
+                     management system. We had to catalogue the current site and all its content, then migrate everything
+                     over to Drupal. In doing so, we had to ensure accessibility of the new pages, a whilst getting familiar
+                     with the CMS ourselves.</p>
+                  </div>
                   <div class="modal-footer">
-                     <button class="close-btn footer-btn" data-trigger-id="modal-4">Close</button>
+                     <button class="close-btn footer-btn" data-trigger-id="modal-6">Close</button>
                   </div>
 
                </div>
