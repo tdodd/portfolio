@@ -1,8 +1,8 @@
 # Node Packages
-/node_modules
+node_modules
 
 # Compiled Output
-/app/build
+app/build
 
 # Editor Files
 .vscode
