@@ -5,6 +5,7 @@ const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const html2pug = require('gulp-html2pug');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
@@ -20,7 +21,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sassIn = 'app/sass/**/*.sass';
 const es6In = 'app/js/**/*.js';
 const imagesIn = 'app/images/**/*';
-const htmlIn = 'app/index.html';
+const htmlIn = 'app/*.html';
 
 // Outputs
 const sassOutDev = 'app/css';
@@ -68,12 +69,12 @@ gulp.task('minify-images', () => {
 });
 
 /**
- * Minify html
+ * Compile views to pug
  */
-gulp.task('copy-html', () => {
+gulp.task('pug', () => {
    gulp.src(htmlIn)
       .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-      .pipe(rename('index.min.html'))
+      .pipe(html2pug())
       .pipe(gulp.dest(htmlOut));
 });
 
@@ -83,15 +84,16 @@ gulp.task('copy-html', () => {
 gulp.task('watch-files', () => {
    browserSync.init({
       server: {
-         baseDir: './app'
+         baseDir: './app',
+         index: 'homepage.html'
       }
    });
    gulp.watch(sassIn, ['compile-sass']);
    gulp.watch(es6In, ['compile-es6']);
    gulp.watch(imagesIn, ['minify-images']);
-   gulp.watch(htmlIn, ['copy-html']);
+   gulp.watch(htmlIn, ['pug']);
    gulp.watch(htmlIn).on('change', browserSync.reload);
 });
 
-gulp.task('build', ['compile-sass', 'compile-es6', 'minify-images', 'copy-html']);
+gulp.task('build', ['compile-sass', 'compile-es6', 'minify-images', 'pug']);
 gulp.task('default', ['watch-files']);
