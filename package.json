@@ -4,7 +4,8 @@
   "description": "My personal website",
   "main": "app.js",
   "scripts": {
-    "start": "node bin/www"
+    "start": "node bin/www",
+    "postinstall": "gulp build"        
   },
   "author": "Thomas Dodd",
   "license": "ISC",
