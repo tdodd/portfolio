@@ -1,11 +1,11 @@
 // Express Modules
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const app = express();
+ express = require('express');
+ path = require('path');
+ favicon = require('serve-favicon');
+ logger = require('morgan');
+ cookieParser = require('cookie-parser');
+ bodyParser = require('body-parser');
+ app = express();
 
 // Middleware
 app.set('views', path.join(__dirname, 'app/build'));
